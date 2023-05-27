@@ -1,18 +1,16 @@
-import { useState, createContext } from "react"
-import Child from "./Child"
+import { createContext,useState } from "react"
+import { Provider } from "react-redux"
 import GrandChild from "./GrandChild"
 
- export const AppContext = createContext(null)
+export const context = createContext("")
 const Parent = () => {
-    const [userName, setUserName] = useState("preeti")
   
-    return (<AppContext.Provider value={{ userName, setUserName }}>
-        <div>
-      {userName}
-        < Child />
-            <GrandChild />
-            </div>
-    </AppContext.Provider>)
+  const [ userName, setUserName] = useState("preeti")
+  return (<context.Provider value={{ userName, setUserName }}>
+    <child />
+    <GrandChild/>
+    {userName}
+  </context.Provider>)
 }
 
-export default Parent;
+export default Parent

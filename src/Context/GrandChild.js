@@ -1,10 +1,12 @@
 import { useContext } from "react";
-import {AppContext} from "./Parent"
+import {context} from "./Parent"
 const GrandChild = () => {
-    const {setUserName} = useContext(AppContext);
-    return (<>
-        <button onClick={()=>setUserName("preeti Baliga")}>Change Name</button>
-    </>)
+    const {setUserName} = useContext(context)
+    return (
+        <div>
+            <button onClick={()=>setUserName("perrti Baliga")}>ChangeName</button>
+        </div>
+        )
 }
 
 export default GrandChild;

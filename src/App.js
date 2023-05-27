@@ -11,7 +11,8 @@ function App() {
   return (
     <div className="App">
       {/* <TimerWrapper onExpire={onExpire} duration={10 * 1000} />
-      <Parent /> */}
+    */}
+       <Parent />
 <Form />
     </div>
   );
